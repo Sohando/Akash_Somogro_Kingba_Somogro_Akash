@@ -1,0 +1,47 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Golpo Somogro</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="turn.min.js"></script>
+        <style>
+            body {
+                overflow: hidden;
+            }
+            #flipbook.page {
+                background: white;
+            }
+			#flipbook .shadow,
+			#flipbook.shadow{
+			  -webkit-box-shadow: 0 4px 10px #666;
+			  -moz-box-shadow: 0 4px 10px #666;
+			  -ms-box-shadow: 0 4px 10px #666;
+			  -o-box-shadow: 0 4px 10px #666;
+			  box-shadow: 0 4px 10px #666;
+			}
+        </style>
+    </head>
+    <body>
+        <div id="flipbook">
+            <div>
+                <img src="Story/akash_somogro2.jpg" width="100%" height="100%"/>
+            </div>
+            <div>
+                <img src="Story/akash_somogro2.jpg" width="100%" height="100%"/>
+            </div>
+			<div>
+                <img src="akash_somogro2.jpg" width="100%" height="100%"/>
+            </div>
+        </div>
+        <script type="text/javascript">
+			$("#flipbook").turn({
+			  width: 1300,
+			  height: 900,
+			  autoCenter: true,
+			  duration: 2000,
+			  page: 1
+			});
+        </script>           
+    </body>
+</html>
