@@ -1,0 +1,40 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Golpo Somogro</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/turn.min.js"></script>
+        <link rel="stylesheet" href="css/book4.css">
+    </head>
+    <body>
+      <div class="wrapper">
+      <div class="aspect">
+        <div class="aspect-inner">
+          <div class="flipbook" id="flipbook">
+            <div class="page"><img src="https://raw.github.com/blasten/turn.js/master/demos/magazine/pages/01.jpg" draggable="false" alt="" /></div>
+            <div class="page"><img src="https://raw.github.com/blasten/turn.js/master/demos/magazine/pages/02.jpg" draggable="false" alt="" /></div>
+            <div class="page"><img src="https://raw.github.com/blasten/turn.js/master/demos/magazine/pages/03.jpg" draggable="false" alt="" /></div>
+            <div class="page"><img src="https://raw.github.com/blasten/turn.js/master/demos/magazine/pages/04.jpg" draggable="false" alt="" /></div>
+            <div class="page"><img src="https://raw.github.com/blasten/turn.js/master/demos/magazine/pages/05.jpg" draggable="false" alt="" /></div>
+            <div class="page"><img src="https://raw.github.com/blasten/turn.js/master/demos/magazine/pages/06.jpg" draggable="false" alt="" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+    var flipbookEL = document.getElementById('flipbook');
+      window.addEventListener('resize', function (e) {
+      flipbookEL.style.width = '';
+      flipbookEL.style.height = '';
+      $(flipbookEL).turn('size', flipbookEL.clientWidth, flipbookEL.clientHeight);
+      });
+      $(flipbookEL).turn({
+        autoCenter: true
+      });
+    </script>
+    </body>
+</html>

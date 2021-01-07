@@ -1,0 +1,63 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+  <style>
+      #book {
+        width: 800px;
+        height: 600px;
+      }
+      #book.turn-page {
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/turn.min.js"></script>
+
+    <script>
+      // $("#previous, #next").click(function () {
+          // $("#book").turn($(this).text());
+          // console.log($(this).text());
+      // });
+      $(function () {
+        $("#book").turn();
+        $("#previous, #next").click(function () {
+            $("#book").turn($(this).text().trim());
+        });
+      });
+    </script>
+  </head>
+<body>
+    <div class="cover" align="center">
+    <!-- <h1> turn.js </h1> -->
+    <!-- <h3> The awesome paper-like effect made ​​for HTML5 </h3> -->
+    <button id="previous"> previous </button>
+    <button id="next"> next </button>
+    <hr/>
+    <div id="book" style="background-color:#184d47;">
+        <img src = "Stories/akash_somogro.jpg"/>
+        <img src = "Stories/akash_somogro.jpg"/>
+        <img src = "Stories/akash_somogro.jpg"/>
+        <img src = "Stories/akash_somogro.jpg"/>
+        <!-- <img src = "Spring / img (2) .jpg" />
+        <img src = "Spring / img (3) .jpg" />
+        <img src = "Spring / img (5) .jpg" />
+        <img src = "Spring / img (4) .jpg" />
+        <img src = "Spring / img (6) .jpg" />
+        <img src = "Spring / img (7) .jpg" /> -->
+    </div>
+    <hr/>
+  </div >
+  <a href="../index.html"> Back to Library</a>
+  <script type="text/javascript">
+    var vHeight = $(window).height(),
+    vWidth = $(window).width(),
+    cover = $('.cover');
+
+    cover.css({"height":vHeight,"width":vWidth});
+  </script>
+</body >
+</html >

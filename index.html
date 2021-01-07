@@ -3,13 +3,82 @@
     <head>
         <meta charset="utf-8">
         <title>Golpo Somogro</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
         <script type="text/javascript" src="turn.min.js"></script>
-        <style>
+        <style type="text/css">
+		body{
+		    overflow:hidden;
+		}
+
+		#flipbook{
+		    width:400px;
+		    height:300px;
+		}
+
+		#flipbook .page{
+		    width:400px;
+		    height:300px;
+		    background-color:white;
+		    line-height:300px;
+		    font-size:20px;
+		    text-align:center;
+		}
+
+		#flipbook .page-wrapper{
+		    -webkit-perspective:2000px;
+		    -moz-perspective:2000px;
+		    -ms-perspective:2000px;
+		    -o-perspective:2000px;
+		    perspective:2000px;
+		}
+
+		#flipbook .hard{
+		    background:#ccc !important;
+		    color:#333;
+		    -webkit-box-shadow:inset 0 0 5px #666;
+		    -moz-box-shadow:inset 0 0 5px #666;
+		    -o-box-shadow:inset 0 0 5px #666;
+		    -ms-box-shadow:inset 0 0 5px #666;
+		    box-shadow:inset 0 0 5px #666;
+		    font-weight:bold;
+		}
+
+		#flipbook .odd{
+		    background:-webkit-gradient(linear, right top, left top, color-stop(0.95, #FFF), color-stop(1, #DADADA));
+		    background-image:-webkit-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+		    background-image:-moz-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+		    background-image:-ms-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+		    background-image:-o-linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+		    background-image:linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+		    -webkit-box-shadow:inset 0 0 5px #666;
+		    -moz-box-shadow:inset 0 0 5px #666;
+		    -o-box-shadow:inset 0 0 5px #666;
+		    -ms-box-shadow:inset 0 0 5px #666;
+		    box-shadow:inset 0 0 5px #666;
+
+		}
+
+		#flipbook .even{
+		    background:-webkit-gradient(linear, left top, right top, color-stop(0.95, #fff), color-stop(1, #dadada));
+		    background-image:-webkit-linear-gradient(left, #fff 95%, #dadada 100%);
+		    background-image:-moz-linear-gradient(left, #fff 95%, #dadada 100%);
+		    background-image:-ms-linear-gradient(left, #fff 95%, #dadada 100%);
+		    background-image:-o-linear-gradient(left, #fff 95%, #dadada 100%);
+		    background-image:linear-gradient(left, #fff 95%, #dadada 100%);
+		    -webkit-box-shadow:inset 0 0 5px #666;
+		    -moz-box-shadow:inset 0 0 5px #666;
+		    -o-box-shadow:inset 0 0 5px #666;
+		    -ms-box-shadow:inset 0 0 5px #666;
+		    box-shadow:inset 0 0 5px #666;
+		}
+	</style>
+        <!-- <style>
             body {
                 overflow: hidden;
-				background: #6e8494;
+				        background: #6e8494;
             }
             #flipbook .page {
                 background: white;
@@ -22,41 +91,46 @@
 			  -o-box-shadow: 0 4px 10px #666;
 			  box-shadow: 0 4px 10px #666;
 			}
-        </style>
+			.container {
+				height: 100vh;
+			}
+		</style> -->
     </head>
     <body>
 		<div class="container mt-5">
         <div id="flipbook">
-            <div>
+            <div class="hard">
                 <img src="Story/akash_somogro2.jpg" width="100%" height="100%"/>
             </div>
             <div>
                 <img src="Story/akash_somogro2.jpg" width="100%" height="100%"/>
             </div>
 			<div>
-                <img src="akash_somogro2.jpg" width="100%" height="100%"/>
+                <img src="Story/akash_somogro2.jpg" width="100%" height="100%"/>
             </div>
 			<div>
                 Hello
             </div>
-			<div>
+			<div class="hard">
                 Mello
                 Mello
             </div>
-			<div>
-                Mello
-                Mello
+			         <div class="hard">
+              <!-- last page -->
             </div>
         </div>
 		</div>
+    <a href="Reference_Book\reference_book2.html">Book 2</a>
+    <a href="Reference_Book\reference_book3.html">Book 3</a>
         <script type="text/javascript">
 			$("#flipbook").turn({
-			  width: 1300,
-			  height: 900,
+			  width: 900,
+			  height: 600,
 			  autoCenter: true,
 			  duration: 2000,
-			  page: 1
+			  page: 1,
 			});
-        </script>           
+      $("flipbook").height(400); $("flipbook").width(300);
+        </script>
     </body>
 </html>
